@@ -1,5 +1,5 @@
 # evil-martians-login-form
-Title & Pitch: “Evil Martians Frontend Engineer — Accessible Login Demo”
+Title: “Evil Martians Frontend Engineer Role, Accessible Login Demo”
 About: One-paragraph summary of the purpose (mocked login SPA with email/password, UX/accessibility focus, light/dark mode).
 Live Demo / Repo: Links to the GitHub Pages deployment and repo.
 Tech Stack: Plain HTML/CSS/JS (no UI lib), mocked fetch() for authentication.
