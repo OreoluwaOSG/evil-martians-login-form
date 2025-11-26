@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sign in</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="description" content="Accessible sign in experience with email and password" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app" id="app">
+        <header class="app-header-bar">
+          <a href="index.html" class="app-logo-link" aria-label="Oreo Home">
+              <img
+              id="app-logo"
+              src="images/logo-light.png"
+              alt="Oreo Logo"
+              class="app-logo"
+              width="70"
+              height="48"
+              data-light-src="images/logo-light.png"
+              data-dark-src="images/logo-dark.png"
+              />
+          </a>
+          <button
+            type="button"
+            id="theme-toggle"
+            class="theme-toggle"
+            aria-pressed="false"
+            aria-label="Toggle dark mode"
+          >
+            Dark mode
+          </button>
+        </header>
+        <section class="app-header">
+            <h1 class="app-title">Welcome to the Oreo Login Form</h1>
+            <p class="app-subtitle" id="app-subtitle">
+              Sign in to continue to your workspace
+            </p>
+        </section>
+      <section class="app-shell" aria-live="off">
+       
+       
+
+        <section
+          id="notification-region"
+          class="visually-hidden"
+          aria-live="polite"
+        ></section>
+
+        <section
+          id="login-view"
+          class="card"
+          aria-label="Sign in form"
+        >
+          <form id="login-form" novalidate>
+            <div
+              id="form-errors"
+              class="alert alert-error"
+              role="alert"
+              aria-live="assertive"
+              hidden
+            >
+              <h2 class="alert-title" id="error-summary-title">
+                Please fix the issues below
+              </h2>
+              <ul class="alert-list" id="error-summary-list"></ul>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="email">Email</label>
+              <div class="field-control">
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  inputmode="email"
+                  required
+                  aria-describedby="email-help"
+                />
+              </div>
+              <p class="field-help" id="email-help">
+                Use the email you signed up with.
+              </p>
+            </div>
+
+            <div class="field">
+              <div class="field-label-row">
+                <label class="field-label" for="password">Password</label>
+                <button
+                  type="button"
+                  class="link-button"
+                  id="toggle-password"
+                  aria-pressed="false"
+                  aria-controls="password"
+                >
+                  Show
+                </button>
+              </div>
+              <div class="field-control">
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  autocomplete="current-password"
+                  required
+                  minlength="8"
+                  aria-describedby="password-help"
+                />
+              </div>
+              <p class="field-help" id="password-help">
+                Minimum eight characters. Avoid using a password you use elsewhere.
+              </p>
+            </div>
+
+            <div class="field field-remember">
+              <label class="checkbox">
+                <input
+                  id="remember"
+                  name="remember"
+                  type="checkbox"
+                />
+                <span>Keep me signed in on this device</span>
+              </label>
+            </div>
+
+            <button
+              id="submit-button"
+              type="submit"
+              class="primary-button"
+              data-default-label="Sign in"
+              data-loading-label="Signing in…"
+            >
+              Sign in
+            </button>
+
+            <p class="muted small">
+              This is a demo interface. Your credentials are sent to a mocked server only.
+            </p>
+          </form>
+        </section>
+
+        <section
+          id="success-view"
+          class="card card-success"
+          hidden
+          aria-live="polite"
+        >
+          <h2 id="welcome-heading" tabindex="-1">
+            You are signed in
+          </h2>
+          <p id="welcome-message"></p>
+          <p class="muted small">
+            In a real product this would redirect to your dashboard. Here we keep it on one page
+            so you can inspect the flow.
+          </p>
+          <button type="button" id="sign-out-button" class="secondary-button">
+            Sign out
+          </button>
+        </section>
+
+       
+      </section>
+      <footer class="app-footer">
+        <p class="muted small">
+          The Oreo Login Form is created by Oreo for Martian Careers
+          © <span id="current-year"></span>
+        </p>
+      </footer>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
